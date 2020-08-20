@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "CafeFrancoise";
+  src: url("../fonts/cafe-francoise/Cafe\ Francoise_D.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+img {
+  @apply w-full h-full object-cover;
+}
+
+button {
+  &:focus,
+  &:active {
+    outline: none !important;
+  }
+}
+
+.more {
+  width: 200px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.75rem 2rem;
+  color: $primary;
+  position: relative;
+  border-color: $primary;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+
+  &::before {
+    border-color: inherit;
+    // content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  &::before {
+    transform: translate3d(-50%, -50%, 0) scale(1.03) rotate(-0.45deg);
+    // border-color: #444;
+    border-radius: 251px 15px 225px 15px/15px 225px 15px 251px;
+  }
+
+  // &::after {
+  //   transform: translate3d(-50%, -50%, 0) scale(-1.015) rotate(0.55deg);
+  //   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  // }
+
+  &.inverse {
+    border-color: #fff;
+    color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: $primary;
+    }
+  }
+
+  &:hover {
+    background-color: $primary;
+    color: #fff;
+  }
+}
+
+.highlight {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+
+  &.highlight-1 {
+    &::before {
+      background-image: url(../img/brush/brush-yellow-1.png);
+    }
+  }
+
+  &::before {
+    content: "";
+    z-index: -1;
+    width: 110%;
+    height: 100%;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    background-image: url(../img/brush/brush-yellow.png);
+    background-repeat: no-repeat;
+    background-size: 110% 30%;
+    background-position: 10% 85%;
+  }
+}
+
+/* 
+================================
+card
+================================
+*/
+
+.card {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* 
+================================
+section
+================================
+*/
+section {
+  padding: 56px 0;
+
+  .title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  &.dark {
+    background: $primary;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    color: #f1f1f1;
+  }
+}

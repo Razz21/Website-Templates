@@ -1,0 +1,59 @@
+footer {
+  background-color: $primary;
+  color: #f1f1f1;
+  text-align: center;
+
+  nav {
+    color: #666;
+    border-bottom: 1px solid #666;
+
+    li:hover {
+      background-color: #0009;
+    }
+  }
+
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 768px;
+    margin: 0 auto;
+
+    form {
+      input {
+        border: 1px solid currentColor;
+        color: inherit;
+        background-color: transparent;
+        // padding: 0.5rem;
+        // box-sizing: border-box;
+        // display: inline-block;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+
+        &::placeholder {
+          color: inherit;
+        }
+
+        &[type="submit"] {
+          background-color: #f1f1f1;
+          color: $primary;
+          border: 2px solid #f1f1f1;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    border-top: 1px solid #666;
+    padding: 1rem 3rem;
+    text-align: center;
+    font-size: 1rem;
+    vertical-align: middle;
+
+    .copyright {
+      font-family: sans-serif;
+    }
+  }
+}

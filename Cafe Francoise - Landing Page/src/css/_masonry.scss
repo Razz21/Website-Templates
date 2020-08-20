@@ -1,0 +1,89 @@
+.masonry {
+  &-wrapper {
+    padding: 1.5em;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-column {
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    padding: 0 0.5rem;
+
+    @include breakpoint(md) {
+      width: 25%;
+    }
+
+    .card {
+      flex: 1 1 auto;
+      width: 100%;
+      min-height: 50px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-bottom: 1.5rem;
+      position: relative;
+      border: 3px solid #eaeaea;
+
+      &.inverse {
+        border: none;
+        .card-body h5 {
+          color: #f1f1f1;
+        }
+      }
+
+      &-cover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-img {
+        width: 100%;
+        padding: 1rem;
+        padding-bottom: 0;
+
+        @include breakpoint(sm) {
+          padding: 1.5rem 1rem;
+        }
+
+        @include breakpoint(md) {
+          padding: 2rem;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+
+      &-body {
+        padding: 1rem;
+        z-index: 1;
+
+        h5 {
+          margin-bottom: 1rem;
+        }
+
+        p {
+          color: #ccc;
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}

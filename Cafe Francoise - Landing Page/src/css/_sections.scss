@@ -1,0 +1,66 @@
+#news {
+  .card {
+    padding: 2rem;
+    border: 5px solid #eaeaea;
+
+    .image__wrap {
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: auto;
+        display: block;
+        padding-bottom: 9 / 16 * 100%;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    h3 {
+      margin-bottom: 0 1rem;
+    }
+  }
+}
+
+#places {
+  .card {
+    height: 100%;
+
+    &__inner {
+      height: 100%;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100% !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .name {
+      font-size: 1rem;
+      font-weight: 300;
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      background: #fff;
+      color: $primary;
+      padding: 0.5rem 1rem;
+
+      @include breakpoint(md) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
